@@ -11,7 +11,7 @@ Streams large XML files with low memory consumption, over HTTP using [Guzzle](ht
 Installing
 ----------
 
-Run `composer require prewk/xml-string-streamer-guzzle` to install this package.
+Run `composer require nyatmeat/xml-string-streamer-guzzle` to install this package.
 
 Examples
 --------
@@ -24,7 +24,9 @@ use Prewk\XmlStringStreamer\Parser;
 $url = "http://example.com/really-large-xml-file.xml";
 
 $CHUNK_SIZE = 1024;
-$stream = new Stream\Guzzle($url, $CHUNK_SIZE);
+$stream = Guzzle::createForFile($url, $CHUNK_SIZE);
+or for stream interface 
+$stream = Guzzle::createForPsrStream($psrStream, $CHUNK_SIZE);
 $parser = new Parser\StringWalker();
 
 $streamer = new XmlStringStreamer($parser, $stream);
