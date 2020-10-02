@@ -1,7 +1,7 @@
 {
-    "name": "prewk/xml-string-streamer-guzzle",
-    "description": "Stream provider for Guzzle for use with xml-string-streamer",
-    "homepage": "https://github.com/prewk/xml-string-streamer",
+    "name": "nyatmeat/xml-string-streamer-guzzle",
+    "description": "Stream provider for Guzzle for use with xml-string-streamer for guzzle 6",
+    "homepage": "https://github.com/nyatmeat/xml-string-streamer",
     "license": "MIT",
     "authors": [
         {
